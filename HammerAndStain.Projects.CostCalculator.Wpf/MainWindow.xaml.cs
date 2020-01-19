@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HammerAndStain.Projects.CostCalculator.Core.Entities;
 
 namespace HammerAndStain.Projects.CostCalculator.Wpf
 {
@@ -23,6 +24,11 @@ namespace HammerAndStain.Projects.CostCalculator.Wpf
         public MainWindow()
         {
             InitializeComponent();
+            using (var projectsContext = new ProjectsContext())
+            {
+                //TODO: Craete the instance programmatically
+                projectsContext.Database.EnsureCreated();
+            }
         }
     }
 }
