@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HammerAndStain.Projects.CostCalculator.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="720" Width="1280">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200" />
+            <RowDefinition Height="75" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Image x:Name="LogoImage" Source="Resources/hammerAndStain-Logo.jpg" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" />
+        <Rectangle Fill="#32d9cc" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" />
+        <TextBlock Text="Project Cost Calculator"
+                   FontSize="50"
+                   FontFamily="Verdana"
+                   Foreground="White"
+                   LineStackingStrategy="MaxHeight"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Grid.Column="0"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2" />
     </Grid>
 </Window>
